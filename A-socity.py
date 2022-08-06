@@ -76,4 +76,4 @@ while True:
         exit()
 
    except:
-      exit()
+      pass
