@@ -136,7 +136,7 @@ def admin_finder():
            req = requests.get(url)
            if req.status_code == 200:
                print(url+Fore.GREEN)
-           elif req.status_code != 200:
+           elif req.status_code == 404:
                print(url+Fore.RED)
     except:
        try:
