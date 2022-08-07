@@ -129,11 +129,23 @@ def admin_finder():
             target = "https://"+target
     except:
        return
-    print("[!] presss ctr+c for end")
+    print("[!] presss ctr+c for exit")
+    for c in admin_db:
+        url = target+"/"+c
+        try:
+           req = requests.get(url)
+           if req.status_code == 200:
+              print(Fore.GREEN+url+"  Found")
+           elif req.status_code == 404:
+              print(Fore.RED+url+"  Not found")
+        except:
+           try:
+               input("[+] back to menu ...")
+               return
+           except:
+               return
     try:
-       url
-
-
-admin_finder()
-    
+       input("[+] back to menu ...")
+    except:
+       pass
 
