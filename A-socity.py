@@ -1,8 +1,8 @@
-#-------------------------------------------
-#coded by alien-01     (:                  #
-#telegram aline0110                        #
-#the quitier you become the more able hear #
-#-------------------------------------------
+#-----------------------------------------------#
+#coded by alien-01     (:                       #
+#telegram aline0110                             #
+#the quitier you become the more your able hear #
+#-----------------------------------------------#
 import time
 import logo
 import os
