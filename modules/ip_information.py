@@ -1,6 +1,7 @@
 import requests
 import time
 import socket
+import ipapi
 
 def ip_information():
    try:
@@ -14,11 +15,9 @@ def ip_information():
        return
    try:
        print("")
-       req = requests.get("https://ipapi.co/"+target+"/json/")
-       result = req.text.split("\n")
-       result = result[1:-1]
-       for r in result:
-         print(r)
+       info = ipapi.location(target)
+       for r in info:
+         print(str(r) + " : " + str(info[r]))
          time.sleep(0.1)
    except:
        print("[!] can't connect to api")
