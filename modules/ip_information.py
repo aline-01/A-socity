@@ -1,30 +1,31 @@
 import requests
 import time
 import socket
-import ipapi
 
 def ip_information():
    try:
-      target = input("target: ")
-      if target == "":return
+      target = input("target:")
       if "." in target:
-         domain_true = target.split(".")
-         if len(domain_true) == 2:
-            target = socket.gethostbyname(target)
+         splited_target = target.split(".")
+         if len(splited_target) == 2:
+            try:
+               target = socket.gethostbyname(target)
+            except:
+               pass
    except:
-       return
+      return
+   req = requests.get("http://ip-api.com/json/"+target)
+   result = req.text.split(",")
+   result = result[1:-1]
+   print("")
+   for r in result:
+      r = r.replace("\""," ")
+      print(r)
+      time.sleep(0.1)
    try:
-       print("")
-       info = ipapi.location(target)
-       for r in info:
-         print(str(r) + " : " + str(info[r]))
-         time.sleep(0.1)
+      print("")
+      input(" back to menu ...")
    except:
-       print("[!] can't connect to api")
-   
-   try:
-      input("[*] back to menu ...")
-   except:
-      pass
+      return
 
 
