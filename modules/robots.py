@@ -45,7 +45,7 @@ def robots():
     if not "https://" in target and not "http://" in target:
         target = "https://"+target
     try:
-       print("")
+       print("[!] press ctr+x for exit")
        for i in search_array:
           target_url = target+"/"+i
           req = requests.get(target_url)
@@ -54,7 +54,7 @@ def robots():
           else:
              print(Fore.RED+target_url)
     except:
-       input("[*] back to menu ...");pass
+       input("[*] back to menu ...");return
     try:
        input("[*] back to menu ...")
     except:
