@@ -2,3 +2,4 @@ requests
 colorama
 builtwith
 shodan
+bs4
