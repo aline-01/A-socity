@@ -5,7 +5,11 @@ how to use
 git clone https://github.com/aline-01/a-socity</br>
 pip3 install -r requirments.txt</br>
 python3 a-socity
+</br>
 
+<img src="https://s2.uupload.ir/files/screenshot_from_2023-04-03_17-40-22_xoti.png">
+
+</br>
 modules</br>
   1_To find IP address information</br>
   2_Find technologies used on the web</br>
